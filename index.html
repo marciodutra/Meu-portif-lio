@@ -152,22 +152,37 @@
         <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
         <form action="https://formsubmit.co/professormarciodutra@gmail.com" method="POST">
-    <input type="text" name="nome" placeholder="Seu nome completo" required>
-    <input type="email" name="email" placeholder="Seu email" required>
-    <input type="text" name="celular" placeholder="Seu celular" required>
-    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <input type="text" name="celular" placeholder="Seu celular" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
 
-    <!-- Configurações extras -->
-    <input type="hidden" name="_subject" value="Novo contato do site!">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://portifoliomarciodutra.netlify.app/">
+            <!-- Configurações extras -->
+            <input type="hidden" name="_subject" value="Novo contato do site!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://portifoliomarciodutra.netlify.app/?sucesso=true">
 
-    <div class="btn-enviar">
-        <input type="submit" value="ENVIAR">
-    </div>
-</form>
+            <div class="btn-enviar">
+                <input type="submit" value="ENVIAR">
+            </div>
+        </form>
+
+        <div id="mensagem-sucesso" style="display:none; color: green; font-weight: bold; margin-top: 20px;">
+    ✅ Mensagem enviada com sucesso!
+</div>
     </div>
 </section>
     </main>
+
+    <script>
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("sucesso") === "true") {
+    document.getElementById("mensagem-sucesso").style.display = "block";
+
+    // (opcional) remove o parâmetro da URL depois
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+</script>
 </body>
 </html>

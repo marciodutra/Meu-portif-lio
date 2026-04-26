@@ -293,3 +293,9 @@ form .btn-enviar input[type=submit]{
     transition: .2s;
 }
 
+#mensagem-sucesso {
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 8px;
+    color: #155724;
+}
