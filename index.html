@@ -151,16 +151,21 @@
     <div class="interface">
         <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-        <form action="enviar.php" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome completo" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <input type="text" name="celular" placeholder="Seu celular" required>
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+        <form action="https://formsubmit.co/professormarciodutra@gmail.com" method="POST">
+    <input type="text" name="nome" placeholder="Seu nome completo" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <input type="text" name="celular" placeholder="Seu celular" required>
+    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
 
-            <div class="btn-enviar">
-                <input type="submit" value="ENVIAR">
-            </div>
-        </form>
+    <!-- Configurações extras -->
+    <input type="hidden" name="_subject" value="Novo contato do site!">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://portifoliomarciodutra.netlify.app/">
+
+    <div class="btn-enviar">
+        <input type="submit" value="ENVIAR">
+    </div>
+</form>
     </div>
 </section>
     </main>
