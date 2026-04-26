@@ -181,12 +181,8 @@
 
     msg.style.display = "block";
 
-    setTimeout(() => {
-      msg.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    }, 300);
+    // vai direto pra posição sem animação
+    msg.scrollIntoView();
 
     window.history.replaceState({}, document.title, window.location.pathname);
   }
