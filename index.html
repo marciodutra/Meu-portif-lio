@@ -173,14 +173,21 @@
     </div>
 </section>
     </main>
-
-    <script>
+<script>
   const params = new URLSearchParams(window.location.search);
 
   if (params.get("sucesso") === "true") {
-    document.getElementById("mensagem-sucesso").style.display = "block";
+    const msg = document.getElementById("mensagem-sucesso");
 
-    // (opcional) remove o parâmetro da URL depois
+    msg.style.display = "block";
+
+    setTimeout(() => {
+      msg.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }, 300);
+
     window.history.replaceState({}, document.title, window.location.pathname);
   }
 </script>
