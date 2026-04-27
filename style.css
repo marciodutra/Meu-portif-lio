@@ -329,9 +329,13 @@ footer .line-footer p{
     font-size: 22px;
 }
 
-@media screen and(max-width: 1020px) {
+@media screen and (max-width: 1020px) {
     .menu-desktop, .btn-contato{
         display: none;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
     }
 
     .flex{
